@@ -4,10 +4,9 @@ library(rmarkdown)
 wd<- "G:/Documents/PostDocKVA/Labbook/"
 html.output.dir<-"G:/Documents/PostDocKVA/Labbook/psjorgensen.github.com/_posts"
 
-project.title<- "real-world-economics"
+project.title<- "macro-socio-ecology"
 
-docs.vec<-c("real-world-economics-outline","real-world-economics-bibliography","finance-sustainability-crashcourse-session2",
-            "finance-sustainability-crashcourse-session4","finance-biosphere-seminar3","mtg-garry-work")
+docs.vec<-c("macro-socio-ecology-outline")
 
 htmlpost_switch <- TRUE # TRUE, FALSE
 html_switch <- TRUE # TRUE, FALSE

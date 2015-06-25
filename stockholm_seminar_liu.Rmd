@@ -1,0 +1,180 @@
+---
+title: "Macro-socio-ecology-outline"
+date: "Monday, May 18, 2015"
+output:
+  html_document:
+    number_sections: yes
+    theme: default
+    toc: yes
+    toc_depth: 3
+  md_document:
+    dev: png
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+  word_document:
+    reference_docx: template.docx
+category: macro-socio-ecology
+layout: post
+tagline: Outlining MSE
+tags:
+- outline
+- macro-socio-ecology
+- economics
+- macroeconomics
+- macroecology
+- socio-ecology
+- macroscopic view
+- sustainability science
+bibliography: PostDocKVA2.bib
+---
+{% include JB/setup %}
+
+Key paper - Liu et al. 2013 - 
+
+#Focus of sustainability research
+
+- Usually in a specific place ("place-based" research)
+  - Often considered closed system
+  - When considering as an open system - global impact of local system often ignored
+  
+- Places as Coupled Human Natural Systems (CHANS)
+
+- Types of CHANS
+
+      - Socio-ecological systems
+      - Socio-environmental sys
+      - Socioeconomic-ecological systems
+      - Ecological-economic systems
+      - Human-environmental systems
+      - Population-natural systes
+      - Social-Economic-Natural Complex Systems
+
+
+- Comparisons of complexity in multiple CHANS
+
+- Beyond comparisons
+
+- Need for an integrated framework to deal with links
+
+# The telecoupling approach
+
+## Three types of distant interaction
+- Teleconnection (Natural-natural)
+- Globalizaion (Human-Human)
+- Telecoupling (CHANS-CHANS)
+
+## Major components
+
+Liu et al. 2013
+
+- sending system
+    - causes
+    - effects
+    - agents
+- receiving system
+    - causes
+    - effects
+    - agents
+- flows
+
+- Spillover system
+  - maybe affected by flows and dynamics of sending and receiving system
+
+## Telecoupling as an umbrella concept of distant interactions
+
+- migration
+- tourism
+- trade of goods and products
+- seed dispersal
+- species invasion
+- disease spread
+- atmosphereic circulation
+- etc. etc.
+
+
+## Benefits of telecoupilng
+
+- integrates both socioeconomic and environmental interactions
+
+
+## Examples of telecoupling framework
+
+### multiple telecouplings between Wolong natural reserve (with Pandas in China) and the world
+
+- connections
+
+    - Grain to green program
+        - fiscal subsidies from national program to natural reserve
+    - Iformation dissemination (english newspaper articles)
+    - Agricultural products
+    - Tourism
+    - Panda loan 
+    
+        - spillover systems
+            - CO2 emissions
+                - memphis - anchorage (fetching bamboo)
+                - anchorage - wolong (fetching pandas)
+                - wolong - edinburgh (delivering panda and bamboo)
+                - edinburgh - memphis (flying plane back to station)
+          - causes
+                - bilateral relations
+          - efffects
+                - feedback effects
+
+
+### Issues related to global food security and land use
+
+
+- telecoupling consortium on food security and land use
+
+- core aim / product of consortium
+    - international and national agent-based models
+    - regional and local agent-based models
+
+- cases
+    - soybean trade between China and the US
+    - change in crop cover types in China
+
+
+
+
+<br><br>
+
+
+------------------
+
+-------------------
+
+<br><br>
+
+
+
+- Impacts of telecoupling on sustainability of different systems
+
+
+
+
+
+
+
+
+
+<br><br>
+
+
+------------------
+
+-------------------
+
+<br><br>
+
+
+# REFERENCES
+
+The following literature was cited
+
