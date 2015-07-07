@@ -6,25 +6,25 @@ html.output.dir<-"G:/Documents/PostDocKVA/Labbook/psjorgensen.github.com/_posts"
 
 project.title<- "macro-socio-ecology"
 
-docs.vec<-c("macro-socio-ecology-outline")
+docs.vec<-c("macro-socio-ecology-outline","macro-socio-ecology-variables")
 
-htmlpost_switch <- TRUE # TRUE, FALSE
-html_switch <- TRUE # TRUE, FALSE
-md_switch <- TRUE # TRUE, FALSE
-pdf_switch <- TRUE # TRUE, FALSE
-word_switch <- TRUE # TRUE, FALSE
+htmlpost_switch <- TRUE # TRUE, 
+#html_switch <- TRUE # TRUE, FALSE
+#md_switch <- TRUE # TRUE, FALSE
+#pdf_switch <- TRUE # TRUE, FALSE
+#word_switch <- TRUE # TRUE, FALSE
 
 #htmlpost_switch <- FALSE # TRUE, FALSE
-#html_switch <- FALSE # TRUE, FALSE
-#md_switch <- FALSE # TRUE, FALSE
-#pdf_switch <- FALSE # TRUE, FALSE
-#word_switch <- FALSE # TRUE, FALSE
+html_switch <- FALSE # TRUE, FALSE
+md_switch <- FALSE # TRUE, FALSE
+pdf_switch <- FALSE # TRUE, FALSE
+word_switch <- FALSE # TRUE, FALSE
 
 
 setwd(paste(wd,"projects/",project.title,sep=""))
 
 
-for(i in 1){#c(1:6)){#1:length(docs.vec)){
+for(i in 2){#c(1:6)){#1:length(docs.vec)){
 
 # html
 if(htmlpost_switch == TRUE){

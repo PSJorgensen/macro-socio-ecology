@@ -1,0 +1,137 @@
+---
+title: "Macro-socio-ecology-variables-shiny"
+date: "3 July 2015"
+runtime: shiny
+output:
+  html_document:
+    number_sections: yes
+    theme: default
+    toc: yes
+    toc_depth: 3
+category: macro-socio-ecology
+layout: post
+tagline: Outlining MSE
+tags:
+- outline
+- macro-socio-ecology
+- economics
+- macroeconomics
+- macroecology
+- socio-ecology
+- macroscopic view
+- sustainability science
+bibliography: PostDocKVA2.bib
+---
+{% include JB/setup %}
+
+
+
+
+<br><br>
+
+----
+
+<br><br>
+
+
+```{r, fig.width=6, fig.height=5, warning=FALSE, error=FALSE, message=FALSE,echo=FALSE}
+library(ggplot2);library(reshape);library(Hmisc);library(ggvis);library(dplyr);library(shiny)
+
+#dir()
+
+#runApp("diamonds_facetgrid")
+setwd("G:\\Documents\\PostDocKVA\\Labbook\\projects\\macro-socio-ecology/diamonds_facetgrid")
+dataset<- read.csv("MF.QoG.melt.df.ggvis.melt.csv",header=TRUE)
+MF.QoG.melt.df.ggvis.melt <- dataset
+
+shinyApp(ui=shinyUI(fluidPage(
+  
+  title = "MacroSocioEco TS Explorer",
+  
+  plotOutput('plot'),
+  
+  hr(),
+  
+  fluidRow(
+    column(3,
+           h4("MacroSocioEco TS Explorer"),
+           sliderInput('sampleSize', 'Sample Size', 
+                       min=1, max=nrow(dataset),
+                       value=nrow(dataset), 
+                       step=25, round=0),
+           br(),
+           checkboxInput('jitter', 'Jitter'),
+           checkboxInput('smooth', 'Smooth')
+    ),
+    column(4, offset = 1,
+           selectInput('x', 'X', names(dataset)),
+           selectInput('y', 'Y', names(dataset), names(dataset)[[2]]),
+           selectInput('color', 'Color', c('None', names(dataset)))
+    ),
+    column(4,
+           selectInput('facet_row', 'Facet Row',
+                       c(None='.', names(MF.QoG.melt.df.ggvis.melt[sapply(MF.QoG.melt.df.ggvis.melt, is.factor)]))),
+           selectInput('facet_col', 'Facet Column',
+                       c(None='.', names(MF.QoG.melt.df.ggvis.melt[sapply(MF.QoG.melt.df.ggvis.melt, is.factor)])))
+    )
+  )
+)),server= 
+shinyServer(function(input, output) {
+  
+  dataset <- reactive({
+    MF.QoG.melt.df.ggvis.melt[sample(nrow(MF.QoG.melt.df.ggvis.melt), input$sampleSize),]
+  })
+  
+  output$plot <- renderPlot({
+    
+    p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_line() + geom_point()
+    
+    if (input$color != 'None')
+      p <- p + aes_string(color=input$color)
+    
+    facets <- paste(input$facet_row, '~', input$facet_col)
+    if (facets != '. ~ .')
+      p <- p + facet_grid(facets,scales = "free_y")
+    
+    if (input$jitter)
+      p <- p + geom_jitter()
+    if (input$smooth)
+      p <- p + geom_smooth()
+    
+    print(p)
+    
+  })
+  
+}),options=list(
+    width="100%", height=700
+  )
+
+)
+
+#shinyAppDir("G:\\Documents\\PostDocKVA\\Labbook\\projects\\macro-socio-ecology/diamonds_facetgrid",
+  #system.file("diamonds_facetgrid", package="shiny"),
+#  options=list(
+#    width="100%", height=700
+#  )
+#)
+#dir()
+
+```
+
+
+<br><br>
+
+
+
+------------------
+
+-------------------
+
+<br><br>
+
+
+# REFERENCES
+
+The following literature was cited
+
+
